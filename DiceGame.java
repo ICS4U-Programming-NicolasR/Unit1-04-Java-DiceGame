@@ -39,7 +39,7 @@ public final class DiceGame {
         do {
             try {
                 // get the users number as an int
-                System.out.printf("Please enter in a number between from 0-6 "
+                System.out.printf("Please enter in a number from 0-6 "
                             + "for the %d time\n", counter + 1);
                 userNum = inputScan.nextInt();
                 // If statement to check how close it is
