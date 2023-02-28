@@ -32,7 +32,7 @@ public final class DiceGame {
         final int upperbound = 7;
         final int randomNum = rand.nextInt(upperbound);
         final int zero = 0;
-        int userNum = 0;
+        int userNum = -1;
         int counter = 0;
         // Created a scanner object
         final Scanner inputScan = new Scanner(System.in);
@@ -54,10 +54,11 @@ public final class DiceGame {
                 // Increase the counter
                 counter++;
             // catch the error
-            } catch (NumberFormatException error) {
+            } catch (Exception error) {
                 System.out.println("You have entered a string "
                         + "You must enter a real number\n"
                         + error);
+                inputScan.nextLine();
             }
         } while (userNum != randomNum);
         // output that they got it correct
