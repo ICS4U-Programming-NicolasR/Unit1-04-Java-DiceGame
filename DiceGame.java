@@ -55,10 +55,11 @@ public final class DiceGame {
                 counter++;
             // catch the error
             } catch (Exception error) {
+                final String stringinput = inputScan.Scanner();
                 System.out.println("You have entered an invalid input "
                         + "You must enter a real number\n"
-                        + error);
-                inputScan.nextLine();
+                        + error.getMessage());
+
             }
         } while (userNum != randomNum);
         // output that they got it correct
